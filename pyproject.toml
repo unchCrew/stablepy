@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "stablepy"
-version = "0.6.1"
+version = "0.7.1"
 description = "A tool for easy use of stable diffusion"
 authors = ["Roger Condori(R3gm) <rocondoriflores@gmail.com>"]
 readme = "README.md"
@@ -30,12 +30,12 @@ onnxruntime = ">=1.18.0"
 insightface = "0.7.3"
 opencv-contrib-python = ">=4.8.0.76"
 sentencepiece = ">=0.2.0"
-numpy = ">=1.23.5,<2.0.0"  # Downgraded to satisfy mediapipe
+numpy = ">=1.23.5,<2.0.0"
 lark = ">=1.1.9"
 spandrel = "0.3.4"
 spandrel-extra-arches = "0.1.1"
 facexlib = "0.3.0"
-protobuf = ">=5.26.1"
+protobuf = ">=4.25.3,<5"  # Adjusted to satisfy mediapipe
 
 [[tool.poetry.source]]
 name = "pytorch-gpu-src"
