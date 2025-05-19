@@ -20,23 +20,22 @@ safetensors = ">=0.4.3"
 mediapy = ">=1.1.9"
 ipywidgets = "7.7.1"
 controlnet-aux = "0.0.6"
-mediapipe = ">=0.10.20"
+mediapipe = "0.10.21"
 pytorch-lightning = ">=2.0.9.post0"
 ultralytics = "<=8.3.48"
 huggingface_hub = ">=0.23.1"
 peft = ">=0.11.1"
 torchsde = ">=0.2.6"
 onnxruntime = ">=1.18.0"
-insightface = ">=0.7.3"
+insightface = "0.7.3"
 opencv-contrib-python = ">=4.8.0.76"
 sentencepiece = ">=0.2.0"
-numpy = ">=2.0.0,<3.0.0"  # Updated to satisfy thinc
+numpy = ">=1.23.5,<2.0.0"  # Downgraded to satisfy mediapipe
 lark = ">=1.1.9"
 spandrel = "0.3.4"
 spandrel-extra-arches = "0.1.1"
 facexlib = "0.3.0"
-protobuf = ">=5.26.1"  # Updated to satisfy ydf and grpcio-status
-thinc = "8.3.6"  # Explicitly include to ensure compatibility
+protobuf = ">=5.26.1"
 
 [[tool.poetry.source]]
 name = "pytorch-gpu-src"
