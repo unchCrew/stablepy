@@ -7,9 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-torch = {version = "*", source = "pytorch-gpu-src"}
-torchvision = {version = "*", source = "pytorch-gpu-src"}
-torchaudio = {version = "*", source = "pytorch-gpu-src"}
+torch = {version = ">=2.0.1", source = "pytorch-gpu-src"}
+torchvision = {version = ">=0.15.2", source = "pytorch-gpu-src"}
+torchaudio = {version = ">=2.0.2", source = "pytorch-gpu-src"}
 omegaconf = ">=2.3.0"
 diffusers = "0.31.0"
 compel = "2.0.2"
@@ -29,12 +29,14 @@ torchsde = ">=0.2.6"
 onnxruntime = ">=1.18.0"
 insightface = ">=0.7.3"
 opencv-contrib-python = ">=4.8.0.76"
-sentencepiece = "*"
-numpy = "<=1.26.4"
-lark = "*"
+sentencepiece = ">=0.2.0"
+numpy = ">=2.0.0,<3.0.0"  # Updated to satisfy thinc
+lark = ">=1.1.9"
 spandrel = "0.3.4"
 spandrel-extra-arches = "0.1.1"
 facexlib = "0.3.0"
+protobuf = ">=5.26.1"  # Updated to satisfy ydf and grpcio-status
+thinc = "8.3.6"  # Explicitly include to ensure compatibility
 
 [[tool.poetry.source]]
 name = "pytorch-gpu-src"
@@ -42,5 +44,5 @@ url = "https://download.pytorch.org/whl/cu121"
 priority = "explicit"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
